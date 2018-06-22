@@ -1,0 +1,43 @@
+/* pages/ask/addasker/addasker.wxss */
+
+.radio-group {
+  height: 65rpx;
+  padding-top: 20rpx;
+}
+
+.area-box {
+  padding: 30rpx;
+  font-size: 11pt;
+  position: relative;
+  border-bottom: 1rpx #e7e7e7 solid;
+  background-color: white;
+}
+
+.area-box textarea {
+  width: 100%;
+}
+
+.wordLimit {
+  position: absolute;
+  right: 30rpx;
+  bottom: 10rpx;
+  color: gray;
+}
+
+.title {
+  border-top: 1rpx #e7e7e7 solid;
+  margin-top: 20rpx;
+  background-color: white;
+  font-size: 13pt;
+  padding: 30rpx;
+}
+
+.weui-btn {
+  margin-top: 80rpx;
+  color: #fff;
+  background-color: #28b7a3;
+  width: 92%;
+}
+radio {  
+  transform:scale(0.7);  
+}  

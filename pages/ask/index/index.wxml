@@ -1,0 +1,43 @@
+<!--pages/ask/index/index.wxml-->
+<view class='page'>
+  <view class='title'>咨询医生</view>
+  <view class='word'>全三甲医院主治医师 / 患者隐私保护 / 医生资格人工审核</view>
+  <view class='content'>
+    <view class='div'>
+      <navigator url="/pages/ask/askbyimg/askbyimg" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="/icon/voice.png" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">图文咨询</view>
+          <view class="weui-media-box__desc">快速匹配医生 平均1小时回复</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+    <view class='div'>
+      <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="/icon/read.png" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">语音咨询</view>
+          <view class="weui-media-box__desc">一对一实时语音 平均60秒接通</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+    <view class='div'>
+      <navigator url="/pages/ask/askDr/askDr" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="/icon/askDr.png" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">找医生</view>
+          <view class="weui-media-box__desc">按科室挑选合适的医生</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+  </view>
+</view>

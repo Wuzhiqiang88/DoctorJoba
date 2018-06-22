@@ -1,0 +1,40 @@
+<!--pages/home/hospitalInfo/hospitalInfo.wxml-->
+<view class='page'>
+ <loading hidden="{{isOK}}">
+    Loading...
+  </loading>
+  <view class='hospitalName'>{{hospital.hosName}}</view>
+  <view class='level'>
+    <image src='/icon/level.png'></image>
+    <view class='levelName'>{{hospital.level}}</view>
+  </view>
+  <view class='img'>
+    <image src='{{hospital.img}}'></image>
+  </view>
+  <view class="weui-cells__title"></view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" data-addr='{{hospital.addr}}' bindtap='openMap'>
+      <view class="weui-cell__hd">
+        <image src="/icon/location.png"></image>
+      </view>
+      <view class="weui-cell__bd">{{hospital.addr}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/icon/tele.png"></image>
+      </view>
+      <view class="weui-cell__bd">联系电话</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">{{hospital.tele}}</view>
+    </navigator>
+  </view>
+
+  <view class="weui-panel">
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">医院介绍</view>
+        <view class="info">{{hospital.info}}</view>
+      </view>
+    </view>
+  </view>
+</view>

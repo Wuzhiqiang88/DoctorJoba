@@ -1,0 +1,75 @@
+<template name="healthItem">
+  <navigator wx:if="{{item.img}}" hover-class="none" url="/pages/home/healthInfo/healthInfo?id={{item.id}}">
+    <view class='new'>
+      <view class='top'>
+        <view class='img'>
+          <image mode='aspectFill' src='{{item.img}}'></image>
+        </view>
+        <view class='right'>
+          <view class='title'>{{item.title}}</view>
+          <view class='intro'>{{item.intro}}</view>
+          <view class='media'>{{item.media_name}}</view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</template>
+
+<template name="articleItem">
+  <navigator hover-class="none" url="/pages/home/articleInfo/articleInfo?id={{item.id}}">
+    <view class='new'>
+      <view class='top'>
+        <view class='articleimg'>
+          <image wx:if="{{item.img}}" mode='aspectFill' src='{{item.img}}'></image>
+          <image wx:if="{{!item.img}}" mode='aspectFill' src='/images/noimg.jpg'></image>
+        </view>
+        <view class='right'>
+          <view class='title'>{{item.title}}</view>
+          <view class='author'>{{item.author}}</view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</template>
+
+<template name="hospitalItem">
+  <navigator hover-class="none" url="/pages/home/hospitalInfo/hospitalInfo?id={{item.id}}">
+    <view class='new'>
+      <view class='top'>
+        <view class='img'>
+          <image mode='aspectFill' src='{{item.img}}'></image>
+        </view>
+        <view class='right'>
+          <view class='title'>{{item.hosName}}</view>
+          <view class='intro'>{{item.addr}}</view>
+          <view class='level'>{{item.level}}</view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</template>
+
+<template name="drugItem">
+  <navigator hover-class="none" url="/pages/home/drugInfo/drugInfo?id={{item.id}}">
+    <view class='new'>
+      <view class='top'>
+        <view class='img'>
+          <image wx:if="{{item.img}}" mode='aspectFill' src='{{item.img}}'></image>
+          <image wx:if="{{!item.img}}" mode='aspectFill' src='/images/noimg.jpg'></image>
+        </view>
+        <view class='right'>
+          <view class='title'>{{item.drugName}}</view>
+          <view class='intro'>【主治疾病】{{item.zzjb}}</view>
+          <view class='manu'>{{item.manu}}</view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</template>
+
+<template name="searchdrugItem">
+  <view catchtap='searchbytype' data-type='{{item.type}}' class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">{{item.type}}</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+</template>

@@ -1,0 +1,105 @@
+<!--pages/home/index/index.wxml-->
+<import src="/template/template.wxml" />
+<view class='page'>
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <label class="weui-search-bar__label" bindtap="toSearch">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜症状 / 医生 / 疾病 / 药品</view>
+      </label>
+    </view>
+  </view>
+  <swiper class='swiper' autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+      <swiper-item>
+        <navigator url="" hover-class="none">
+          <image mode='widthFix' src="{{item.url}}" class="slide-image" />
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='nav'>
+    <navigator url="/pages/ask/askDr/askDr" class="menu" hover-class="none">
+      <image mode='widthFix' src="/icon/askDr.png" />
+      <view class="menu_label">问医生</view>
+    </navigator>
+    <navigator url="/pages/home/searchHospital/searchHospital" class="menu" hover-class="none">
+      <image mode='widthFix' src="/icon/hospital.png" />
+      <view class="menu_label">查医院</view>
+    </navigator>
+    <navigator url="/pages/home/searchDisease/searchDisease" class="menu" hover-class="none">
+      <image mode='widthFix' src="/icon/disease.png" />
+      <view class="menu_label">查疾病</view>
+    </navigator>
+    <navigator url="/pages/home/searchDrug/searchDrug" class="menu" hover-class="none">
+      <image mode='widthFix' src="/icon/drugSelect.png" />
+      <view class="menu_label">查药品</view>
+    </navigator>
+    <navigator url="" class="menu" hover-class="none">
+      <image mode='widthFix' src="/icon/voice.png" />
+      <view class="menu_label">语音问诊</view>
+    </navigator>
+    <navigator url="" class="menu" hover-class="none">
+      <image mode='widthFix' src="/icon/class.png" />
+      <view class="menu_label">医师讲堂</view>
+    </navigator>
+    <navigator url="" class="menu" hover-class="none">
+      <image mode='widthFix' src="/icon/read.png" />
+      <view class="menu_label">报告解读</view>
+    </navigator>
+    <navigator url="" class="menu" hover-class="none">
+      <image mode='widthFix' src="/icon/help.png" />
+      <view class="menu_label">导诊助手</view>
+    </navigator>
+  </view>
+  <view class="weui-tab">
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <view class="weui-tab__panel">
+      <view hidden="{{activeIndex != 0}}">
+        <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" bindscrolltolower="bindDownLoad">
+          <view wx:if="{{hidden}}" class='loading'>
+            <image src='/icon/loading.gif'></image>
+          </view>
+          <template is="healthItem" data="{{item,index:index}}" wx:for="{{healthlist_1}}" wx:key="healthlist_1" />
+           <view wx:if="{{!hidden}}" class='loading' style='margin-top:5rpx;margin-bottom:5rpx;'>
+            <image src='/icon/loading.gif'></image>
+          </view>
+        </scroll-view>
+      </view>
+      <view hidden="{{activeIndex != 1}}">
+        <scroll-view>
+          <template is="healthItem" data="{{item,index:index}}" wx:for="{{healthlist_2}}" wx:key="healthlist_2" />
+        </scroll-view>
+
+      </view>
+      <view hidden="{{activeIndex != 2}}">
+        <scroll-view>
+          <template is="healthItem" data="{{item,index:index}}" wx:for="{{healthlist_3}}" wx:key="healthlist_3" />
+        </scroll-view>
+      </view>
+      <view hidden="{{activeIndex != 3}}">
+        <scroll-view>
+          <template is="healthItem" data="{{item,index:index}}" wx:for="{{healthlist_4}}" wx:key="healthlist_4" />
+        </scroll-view>
+      </view>
+      <view hidden="{{activeIndex != 4}}">
+        <scroll-view>
+          <template is="healthItem" data="{{item,index:index}}" wx:for="{{healthlist_5}}" wx:key="healthlist_5" />
+        </scroll-view>
+      </view>
+      <view hidden="{{activeIndex != 5}}">
+        <scroll-view>
+          <template is="healthItem" data="{{item,index:index}}" wx:for="{{healthlist_6}}" wx:key="healthlist_6" />
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/home/healthInfo/healthInfo.wxml-->
+<view class='page'>
+  <loading hidden="{{isOK}}">
+    Loading...
+  </loading>
+  <view class='title'>{{title}}</view>
+  <view class='media'>{{media}}</view>
+  <view class='intro'>{{intro}}</view>
+  <view class='img'>
+    <image mode='widthFix' src='{{img}}'></image>
+  </view>
+  <view class='content'>
+    <text>{{content}}</text>
+  </view>
+</view>

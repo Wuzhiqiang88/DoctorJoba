@@ -1,0 +1,72 @@
+/* pages/ask/askerInfo/askerInfo.wxss */
+.page,page{
+  background-color: white;
+}
+.weui-btn {
+  margin-top: 80rpx;
+  color: #fff;
+  background-color: #28B7A3;
+  width: 92%;
+}
+.title{
+  margin: 30rpx;
+  margin-top: 50rpx;
+  margin-bottom: 15rpx;
+  font-size: 14pt;
+  font-weight: bold;
+}
+.word{
+  margin: 30rpx;
+  margin-top: 0rpx;
+  font-size: 11pt;
+  color: gray;
+}
+.add{
+  margin-left: 30rpx;
+  margin-bottom: 30rpx;
+  width: 320rpx;
+  height: 150rpx;
+  border: 5rpx gainsboro dashed;
+  border-radius: 10rpx;
+  color: gray;
+  font-size: 11pt;
+  text-align: center;
+}
+.icon{
+  font-size: 30pt;
+  margin-bottom: 10rpx;
+  margin-top: 20rpx;
+}
+.icon image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.askerInfo{
+  margin-left: 30rpx;
+  margin-bottom: 30rpx;
+  width: 320rpx;
+  height: 150rpx;
+  border: 1rpx gainsboro solid;
+  border-radius: 10rpx;
+  color: gray;
+  font-size: 11pt;
+  text-align: center;
+}
+.askerInfo:hover{
+  border: 1rpx #28B7A3 solid;
+  background-color: #e6f9ec;
+}
+.div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.call{
+  font-size: 12pt;
+  font-weight: bold;
+  margin-top: 30rpx;
+}
+.gender{
+  font-size: 10pt;
+  margin-top: 10rpx;
+}

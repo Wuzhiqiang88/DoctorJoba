@@ -1,0 +1,38 @@
+/* pages/home/diseaseInfo/diseaseInfo.wxss */
+
+.page {
+  background-color: white;
+}
+
+.introduction {
+  border-bottom: 1rpx solid #e7e7e7;
+  border-left: 4px solid #39d167;
+  padding: 30rpx;
+  font-size: 13pt;
+}
+
+.content {
+  color: #666;
+  padding: 30rpx;
+  padding-bottom: 0rpx;
+  margin-bottom: 30rpx;
+  font-size: 11pt;
+  line-height: 48rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+}
+
+.title {
+  border-bottom: 1rpx solid #e7e7e7;
+  padding: 30rpx;
+  font-size: 12pt;
+  font-weight: bold;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

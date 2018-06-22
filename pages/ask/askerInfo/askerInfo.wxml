@@ -1,0 +1,14 @@
+<!--pages/ask/askerInfo/askerInfo.wxml-->
+<view class='page'>
+<view class='title'>请选择问诊人信息</view>
+<view class='word'>以便医生给出更准确的治疗，信息仅医生可见</view>
+<view class='div'>
+<view wx:for="{{askerInfo}}" wx:key="askerInfo">
+<view class='askerInfo'><view class='call'>{{item.call}}</view><view class='gender'>{{item.gender}} | {{item.wight}}kg</view></view>
+</view>
+<navigator url='/pages/ask/addasker/addasker' hover-class='none' class='add'><view class='icon'><image src='/icon/add.png'></image></view><view>添加问诊人</view></navigator>
+
+</view>
+
+<button class="weui-btn" bindtap="toDo">下一步</button>
+</view>

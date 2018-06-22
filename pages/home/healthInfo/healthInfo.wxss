@@ -1,0 +1,46 @@
+/* pages/home/healthInfo/healthInfo.wxss */
+
+.page {
+  padding: 40rpx;
+  font-size: 11pt;
+  background-color: white;
+  height: 100%;
+}
+
+.title {
+  font-size: 16pt;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+  margin-top: 15rpx;
+  line-height: 28px;
+}
+
+.media {
+  margin-bottom: 30rpx;
+  font-size: 10pt;
+  color: #999;
+}
+
+.intro {
+  margin-bottom: 30rpx;
+}
+
+.img {
+  width: 100%;
+  margin-bottom: 10rpx;
+}
+
+.img image {
+  width: 100%;
+}
+
+.content {
+  margin-top: -30rpx;
+  margin-bottom: 30rpx;
+  line-height: 25px;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

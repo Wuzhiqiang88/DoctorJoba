@@ -1,0 +1,22 @@
+<!--pages/home/diseaseInfo/diseaseInfo.wxml-->
+<view class='page'>
+  <loading hidden="{{isOK}}">
+    Loading...
+  </loading>
+  <view class='introduction'>疾病介绍</view>
+  <view class='content'>{{disease.introductionOfDisease}}</view>
+  <view class='title'>高发群体</view>
+  <view class='content'>{{disease.highIncidenceGroup}}</view>
+  <view class='title'>传染</view>
+  <view class='content'>{{disease.contagion}}</view>
+  <view class='title'>症状</view>
+  <view class='content'>{{disease.state}}</view>
+  <view class='title'>诊断和鉴别</view>
+  <view class='content'>{{disease.diagnosis}}</view>
+  <view class='title'>治疗</view>
+  <view class='content'>{{disease.cure}}</view>
+  <view class='title'>护理</view>
+  <view class='content'>{{disease.nursing}}</view>
+  <view class='title'>检查</view>
+  <view class='content'>{{disease.inspect}}</view>
+</view>

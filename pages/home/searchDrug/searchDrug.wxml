@@ -1,0 +1,36 @@
+<!--pages/home/searchDrug/searchDrug.wxml-->
+<import src="/template/template.wxml" />
+<view class='page'>
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" auto-focus='true' value="{{wxSearchData.value}}" bindinput="wxSearchInput" bindconfirm="wxSearchConfirm" />
+        <view class="weui-icon-clear" wx:if="{{wxSearchData.value.length > 0}}" bindtap="wxSearchClear">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+    </view>
+    <view class="weui-search-bar__cancel-btn" bindtap="wxSearchConfirm">
+      <text wx:if="{{wxSearchData.value.length>0}}" data-key='search'>搜索</text>
+      <text wx:else data-key='back'>返回</text>
+    </view>
+  </view>
+
+  <loading hidden="{{isOK}}">
+    Loading...
+  </loading>
+  <view wx:if="{{showtype}}">
+    <view class='searchbytitle'>按分类 查药品</view>
+    <view class="weui-cells weui-cells_after-title">
+      <template is="searchdrugItem" data="{{item,index:index}}" wx:for="{{list}}" wx:key="list" />
+    </view>
+  </view>
+  <view wx:if="{{!showtype}}">
+  <view catchtap='back' class='typetitle'><view class='backimg'><image src='/icon/back.png'></image></view><view>{{drugtype}}</view></view>
+    <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" bindscrolltolower="bindDownLoadDrug">
+      <template is="drugItem" data="{{item,index:index}}" wx:for="{{druglist}}" wx:key="druglist" />
+      <view class='notfind' wx:if="{{ret_code==-1}}">「抱歉，没有找到你想要的内容」</view>
+    </scroll-view>
+  </view>
+</view>

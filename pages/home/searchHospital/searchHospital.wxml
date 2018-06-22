@@ -1,0 +1,57 @@
+<!--pages/home/searchHospital/searchHospital.wxml-->
+<import src="/template/template.wxml" />
+<view class='page'>
+  <view class='page'>
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" auto-focus='true' value="{{wxSearchData.value}}" bindinput="wxSearchInput" bindconfirm="wxSearchConfirm" />
+          <view class="weui-icon-clear" wx:if="{{wxSearchData.value.length > 0}}" bindtap="wxSearchClear">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+      </view>
+      <view class="weui-search-bar__cancel-btn" bindtap="wxSearchConfirm">
+        <text wx:if="{{wxSearchData.value.length>0}}" data-key='search'>搜索</text>
+        <text wx:else data-key='back'>返回</text>
+      </view>
+    </view>
+ <view class="wxSearchInner">
+    <!-- 搜索提示部分 -->
+    <view wx:if="{{!hidden}}" class="wxSearchMindKey">
+      <view class="wxSearchMindKeyList">
+        <block wx:for="{{wxSearchData.tipKeys}}" wx:key="*this">
+          <view class="wxSearchMindKeyItem" bindtap="wxSearchKeyTap" data-key="{{item}}">{{item}}</view>
+        </block>
+      </view>
+    </view>
+  </view>
+
+    <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" bindscrolltolower="bindDownLoad">
+      <view class='hospitaltitle'>当前定位
+        <view class='location'>
+          <image src='/icon/location.png'></image>{{city}}</view>
+      </view>
+      
+      <template is="hospitalItem" data="{{item,index:index}}" wx:for="{{hospitallist}}" wx:key="hospitallist" />
+      <view wx:if="{{isOK}}" class='loading' style='margin-top:5rpx;margin-bottom:5rpx;'>
+        <image src='/icon/loading.gif'></image>
+      </view>
+      <view wx:if="{{num!=0}}" class='notfind'>「抱歉，没有找到你想要的内容」</view>
+    </scroll-view>
+
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

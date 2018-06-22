@@ -1,0 +1,31 @@
+/* pages/home/drugInfo/drugInfo.wxss */
+.page{
+  background-color: white;
+  padding: 30rpx;
+  font-size: 12pt;
+}
+.strong{
+  font-size: 12pt;
+  font-weight: bold;
+}
+.content{
+  color: gray;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  padding-left: 16rpx;
+  padding-right: 16rpx;
+}
+.drugName{
+  padding-left: 16rpx;
+  padding-right: 16rpx;
+  font-size: 14pt;
+  font-weight: bold;
+}
+.img{
+  text-align:center;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

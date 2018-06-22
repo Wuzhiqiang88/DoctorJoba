@@ -1,0 +1,109 @@
+/* pages/home/index/index.wxss */
+@import "/template/template.wxss";
+
+page, .page, .page__bd {
+  height: 100%;
+}
+
+.weui-search-bar {
+  background-color: #28b7a3;
+  border-top: 0rpx;
+  border-bottom: 0px;
+}
+
+.weui-search-bar__form {
+  padding: 5rpx;
+  height: 55rpx;
+}
+
+.weui-icon-search {
+  margin-top: 10rpx;
+}
+
+.weui-search-bar__cancel-btn {
+  color: white;
+}
+
+.weui-search-bar__input {
+  margin-top: -2rpx;
+}
+
+.weui-search-bar__cancel-btn {
+  margin-top: 5rpx;
+}
+
+.slide-image {
+  width: 100%;
+}
+
+.nav {
+  padding-bottom: 30rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  margin-top: 30rpx;
+  margin-bottom: 10rpx;
+}
+
+.menu image {
+  width: 90rpx;
+}
+
+.menu_label {
+  margin-top: 10rpx;
+}
+
+.swiper {
+  height: 200rpx;
+}
+
+.weui-navbar {
+  border-bottom: 1rpx gainsboro solid;
+  background-color: white;
+}
+
+.weui-tab {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.weui-tab__panel{
+  padding-top: 48px;
+}
+.weui-navbar__slider {
+  background-color: #28b7a3;
+  width: 100rpx;
+}
+
+.weui-navbar__item.weui-bar__item_on {
+  color: #28b7a3;
+}
+
+.weui-navbar__item {
+  max-height: 40rpx;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.loading{
+  margin-top: 50rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.loading image{
+  width: 150rpx;
+  height: 40rpx;
+}
+

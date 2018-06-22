@@ -1,0 +1,32 @@
+<!--pages/start/editInfo/editInfo.wxml-->
+<view class="page">
+  <view class="userinfo">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  </view>
+
+  <button class="weui-btn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 授权注册 </button>
+  <block wx:else>
+    <view class="weui-cells__title"></view>
+    <view class="weui-cells weui-cells_after-title">
+
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+          <image src="/icon/user.svg"></image>
+        </view>
+        <view class="weui-cell__bd">名字</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">{{userInfo.nickName}}</view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+          <image src="/icon/gender.svg"></image>
+        </view>
+        <view class="weui-cell__bd">性别</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">{{gender[userInfo.gender]}}</view>
+      </navigator>
+
+    </view>
+    <view class="weui-cells__title"></view>
+   
+    <button class="weui-btn" bindtap="showTopTips">确定</button>
+  </block>
+</view>

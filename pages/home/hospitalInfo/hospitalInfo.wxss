@@ -1,0 +1,59 @@
+/* pages/home/hospitalInfo/hospitalInfo.wxss */
+
+.hospitalName {
+  padding: 30rpx;
+  padding-bottom: 20rpx;
+  background-color: white;
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+.level {
+  background-color: white;
+  padding: 30rpx;
+  padding-top: 0rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.level image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 5rpx;
+  margin-right: 10rpx;
+}
+
+.levelName {
+  color: #999;
+}
+
+.img {
+  background-color: white;
+  border-bottom: 1rpx gainsboro solid;
+  display: flex;  
+  flex-direction: row;  
+  justify-content: center;
+}
+.img image{
+  width: 90%;
+}
+
+.weui-cell__hd image{
+  width: 45rpx;
+  height: 45rpx;
+}
+.weui-media-box__title_in-text{
+  font-size: 17px;
+}
+.info{
+  margin-top: 20rpx;
+  font-size: 14px;
+  color: #000;
+  line-height: 22px;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

@@ -1,0 +1,74 @@
+<!--pages/my/isDr/isDr.wxml-->
+<form bindsubmit="toDo">
+  <view class='page'>
+    <view class="weui-cells__title"></view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">称呼</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input name="call" class="weui-input" placeholder="请填写您的称呼" />
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">所属医院</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker name="hospital" bindchange="bindCountryChange" value="{{countryIndex}}" range="{{countries}}">
+            <view class="weui-select weui-select_in-select-after">{{countries[countryIndex]}}</view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">所属一级科室</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker name="department1" bindchange="bindCountryChange" value="{{countryIndex}}" range="{{countries}}">
+            <view class="weui-select weui-select_in-select-after">{{countries[countryIndex]}}</view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">所属二级科室</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker name="department2" bindchange="bindCountryChange" value="{{countryIndex}}" range="{{countries}}">
+            <view class="weui-select weui-select_in-select-after">{{countries[countryIndex]}}</view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">职称</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input name="title" class="weui-input" placeholder="请填写您的职称" />
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__title"></view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input weui-cell_vcode">
+        <view class="weui-cell__hd">
+          <view class="weui-label">擅长</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入您擅长的疾病" />
+        </view>
+        <view class="weui-cell__ft">
+          <view class="weui-vcode-btn">添加</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button formType="submit" class="weui-btn">完成</button>
+
+</form>

@@ -1,0 +1,54 @@
+{
+  "pages": [
+
+ "pages/start/index/index",
+    "pages/home/index/index",
+        "pages/my/isDr/isDr",
+    "pages/home/healthInfo/healthInfo",
+    "pages/home/searchDrug/searchDrug",
+    "pages/home/articleInfo/articleInfo",
+    "pages/ask/askbyimg/askbyimg",
+    "pages/start/editInfo/editInfo",
+    "pages/ask/index/index",
+    "pages/home/search/search",
+    "pages/home/drugInfo/drugInfo",
+    "pages/home/searchDisease/searchDisease",
+    "pages/home/searchHospital/searchHospital",
+    "pages/home/hospitalInfo/hospitalInfo",
+    "pages/home/diseaseInfo/diseaseInfo",
+    "pages/ask/askDr/askDr",
+      "pages/ask/addasker/addasker",
+      "pages/ask/askerInfo/askerInfo",
+    "pages/my/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#28B7A3",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#28B7A3",
+    "list": [
+      {
+        "selectedIconPath": "icon/homeSelect.png",
+        "iconPath": "icon/home.png",
+        "pagePath": "pages/home/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "icon/askSelect.png",
+        "iconPath": "icon/ask.png",
+        "pagePath": "pages/ask/index/index",
+        "text": "问诊"
+      },
+      {
+        "selectedIconPath": "icon/mySelect.png",
+        "iconPath": "icon/my.png",
+        "pagePath": "pages/my/index/index",
+        "text": "我的"
+      }
+    ]
+  }
+}

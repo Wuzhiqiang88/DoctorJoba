@@ -1,0 +1,50 @@
+<!--pages/ask/askDr/askDr.wxml-->
+<view class='page'>
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" auto-focus='true' value="{{wxSearchData.value}}" bindinput="wxSearchInput" bindconfirm="wxSearchConfirm" />
+        <view class="weui-icon-clear" wx:if="{{wxSearchData.value.length > 0}}" bindtap="wxSearchClear">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+    </view>
+    <view class="weui-search-bar__cancel-btn" bindtap="wxSearchConfirm">
+      <text wx:if="{{wxSearchData.value.length>0}}" data-key='search'>搜索</text>
+      <text wx:else data-key='back'>返回</text>
+    </view>
+  </view>
+
+  <scroll-view scroll-x="true" class='scroll-header'>
+    <block wx:for="{{tabs}}" wx:key="tabs">
+      <view bindtap="tabClick" id="{{index}}" class="option {{activeIndex == index ? 'option_on' : ''}}">{{item}}</view>
+    </block>
+  </scroll-view>
+  <navigator url=''>
+  <view class='div'>
+  <view class='img'><image src='/images/Dr1.jpg'></image></view>
+  <view class='right'><view class='name'>陈实</view><view class='title'>主治医师</view><view class='dep'>妇科</view><view class='hos'>中国医学科学院妇科病医院</view>
+  <view class='good'>擅长：月经失调、备孕</view></view>
+  </view>
+  </navigator>
+  <navigator url=''>
+  <view class='div'>
+  <view class='img'><image src='/images/Dr2.jpg'></image></view>
+  <view class='right'><view class='name'>张扬</view><view class='title'>副主任医师</view><view class='dep'>妇科</view><view class='hos'>北京大学人民医院</view>
+  <view class='good'>擅长：产前咨询、备孕</view></view>
+  </view>
+  </navigator>
+  <navigator url=''>
+  <view class='div'>
+  <view class='img'><image src='/images/Dr3.jpg'></image></view>
+  <view class='right'><view class='name'>钱志大</view><view class='title'>主治医师</view><view class='dep'>妇科</view><view class='hos'>浙江大学医学院附属妇科医院</view>
+  <view class='good'>擅长：月经失调、人流</view></view>
+  </view>
+  </navigator>
+
+  <scroll-view class='' scroll-y="true" style='height:920rpx;width:50%;'>
+
+  </scroll-view>
+
+</view>

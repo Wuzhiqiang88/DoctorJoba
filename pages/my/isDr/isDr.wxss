@@ -1,0 +1,7 @@
+/* pages/my/isDr/isDr.wxss */
+.weui-btn {
+  margin-top: 80rpx;
+  color: #fff;
+  background-color: #28b7a3;
+  width: 92%;
+}

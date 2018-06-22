@@ -1,0 +1,123 @@
+<!--pages/home/searchDisease/searchDisease.wxml-->
+<view class='page'>
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" auto-focus='true' value="{{wxSearchData.value}}" bindinput="wxSearchInput" bindconfirm="wxSearchConfirm" />
+        <view class="weui-icon-clear" wx:if="{{wxSearchData.value.length > 0}}" bindtap="wxSearchClear">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+    </view>
+    <view class="weui-search-bar__cancel-btn" bindtap="wxSearchConfirm">
+      <text wx:if="{{wxSearchData.value.length>0}}" data-key='search'>搜索</text>
+      <text wx:else data-key='back'>返回</text>
+    </view>
+  </view>
+
+  <scroll-view scroll-x="true" class='scroll-header'>
+    <block wx:for="{{tabs}}" wx:key="tabs">
+      <view id="{{index}}" data-department='{{item.title}}' class="option {{activeIndex == index ? 'option_on' : ''}}" bindtap="tabClick">
+        <view class='optionImg'>
+          <image src='{{item.img}}'></image>
+          <view class='optionTitle'>{{item.title}}</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  <view wx:if='{{activeIndex==0}}'>
+    <view class='diseasetype'>女性</view>
+    <view class='diseasediv'>
+      <navigator hover-class='none' url='/pages/home/diseaseInfo/diseaseInfo?id=2'>阴道炎</navigator>
+      <navigator url=''>月经不调</navigator>
+      <navigator url=''>女性不孕症</navigator>
+    </view>
+    <view class='diseasediv'>
+      <navigator url=''>功血</navigator>
+      <navigator url=''>宫颈糜烂</navigator>
+      <navigator url=''>子宫肌瘤</navigator>
+    </view>
+    <view class='diseasediv'>
+      <navigator url=''>乳腺炎</navigator>
+      <navigator url=''>乳腺癌</navigator>
+      <navigator url=''>盆腔炎</navigator>
+    </view>
+    <view class='diseasetype'>儿童</view>
+    <view class='diseasediv'>
+      <navigator hover-class='none' url='/pages/home/diseaseInfo/diseaseInfo?id=320'>小儿肺炎</navigator>
+      <navigator url=''>小儿腹泻</navigator>
+      <navigator url=''>小儿湿疹</navigator>
+    </view>
+    <view class='diseasediv'>
+      <navigator url=''>小儿食积</navigator>
+      <navigator url=''>儿童遗尿症</navigator>
+      <navigator url=''>手足口病</navigator>
+    </view>
+    <view class='diseasediv'>
+      <navigator url=''>鹅口疮</navigator>
+      <navigator url=''></navigator>
+      <navigator url=''></navigator>
+    </view>
+    <view class='diseasetype'>男性</view>
+    <view class='diseasediv'>
+      <navigator url=''>前列腺炎</navigator>
+      <navigator url=''>龟头炎</navigator>
+      <navigator url=''>阳痿</navigator>
+    </view>
+    <view class='diseasediv'>
+      <navigator url=''>早泄</navigator>
+      <navigator url=''>包皮过长</navigator>
+      <navigator url=''>睾丸炎</navigator>
+    </view>
+    <view class='diseasediv'>
+      <navigator url=''>前列腺增生</navigator>
+      <navigator url=''>精囊炎</navigator>
+      <navigator url=''>男性不育症</navigator>
+    </view>
+    <view class='diseasetype'>上班族</view>
+    <view class='diseasediv'>
+      <navigator url=''>颈椎病</navigator>
+      <navigator url=''>鼠标手</navigator>
+      <navigator url=''>屏幕脸</navigator>
+    </view>
+    <view class='diseasediv'>
+      <navigator url=''>腰椎病</navigator>
+      <navigator url=''>干眼</navigator>
+      <navigator url=''>紧张性头痛</navigator>
+    </view>
+    <view class='diseasediv'>
+      <navigator url=''>空调病</navigator>
+      <navigator url=''>失眠症</navigator>
+      <navigator url=''>胃病</navigator>
+    </view>
+    <view class='diseasetype'>老年人</view>
+    <view class='diseasediv'>
+      <navigator url=''>白内障</navigator>
+      <navigator url=''>骨关节炎</navigator>
+      <navigator url=''>动脉硬化</navigator>
+    </view>
+    <view class='diseasediv'>
+      <navigator url=''>中风</navigator>
+      <navigator url=''>冠心病</navigator>
+      <navigator url=''>骨质疏松</navigator>
+    </view>
+    <view class='diseasediv'>
+      <navigator url=''>心律失常</navigator>
+      <navigator url=''>老年痴呆</navigator>
+      <navigator url=''>远视眼</navigator>
+    </view>
+  </view>
+  <view class='panel' wx:else>
+    <scroll-view class='department' scroll-y="true" style='height:920rpx;width:50%;'>
+      <block wx:for="{{departments}}" wx:key="departments">
+        <view id="{{index}}" data-departments='{{item.department2Name}}' class="departments  {{depActiveIndex == index ? 'departments_on' : ''}}" catchtap='depTabClick'>{{item.department2Name}}</view>
+      </block>
+    </scroll-view>
+    <scroll-view scroll-y="true" style='height:920rpx;width:50%;'>
+      <block wx:for="{{symptoms}}" wx:key="symptoms">
+        <navigator hover-class='none' url='/pages/home/diseaseInfo/diseaseInfo?id={{item.id}}' class='symptoms'>{{item.symptomsName}}</navigator>
+      </block>
+    </scroll-view>
+  </view>
+</view>

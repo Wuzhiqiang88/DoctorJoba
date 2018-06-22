@@ -1,0 +1,38 @@
+<!--pages/home/drugInfo/drugInfo.wxml-->
+<view class='page'>
+  <loading hidden="{{isOK}}">
+    Loading...
+  </loading>
+<view class='drugName'>{{drug.drugName}}</view>
+<view class='content'>请仔细阅读说明书并在医师指导下使用</view>
+<view class='strong'>【药品名称】</view>
+<view class='content'>{{drug.drugName}}</view>
+<view wx:if="{{drug.img}}" class='img'><image src='{{drug.img}}'></image></view>
+<view class='strong'>【药品类别】</view>
+<view class='content'>{{drug.type}}</view>
+<view class='strong'>【主要成分】</view>
+<view class='content'>{{drug.zycf}}</view>
+<view class='strong'>【适应症】</view>
+<view class='content'>{{drug.syz}}</view>
+<view class='strong'>【主治疾病】</view>
+<view class='content'>{{drug.zzjb}}</view>
+<view class='strong'>【用法用量】</view>
+<view class='content'>{{drug.yfyl}}</view>
+<view class='strong'>【不良反应】</view>
+<view class='content'>{{drug.blfy}}</view>
+<view class='strong'>【禁忌】</view>
+<view class='content'>{{drug.jj}}</view>
+<view class='strong'>【注意事项】</view>
+<view class='content'>{{drug.zysx}}</view>
+<view class='strong'>【药物相互作用】</view>
+<view class='content'>{{drug.ywxhzy}}</view>
+<view class='strong'>【贮藏】</view>
+<view class='content'>{{drug.zc}}</view>
+<view class='strong'>【批准文号】</view>
+<view class='content'>{{drug.pzwh}}</view>
+<view class='strong'>【生产企业】</view>
+<view class='content'>{{drug.manu}}</view>
+<view class='strong'>【参考价格】</view>
+<view class='content'>￥{{drug.price}}</view>
+</view>
+

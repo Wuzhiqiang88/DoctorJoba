@@ -1,0 +1,20 @@
+<!--pages/ask/askbyimg/askbyimg.wxml-->
+<view class='page'>
+  <view class="area-box">
+    <textarea placeholder="请描述你的年龄、性别、症状及就诊经历，便于医生进行准确分析，我们会确保你的隐私安全" maxlength="{{noteMaxLen}}" bindinput="bindWordLimit" />
+    <text class="wordLimit">{{currentNoteLen|0}}/{{noteMaxLen}}</text>
+  </view>
+
+  <view class='allpic'>
+
+    <view class='imgalist' wx:for="{{imgalist}}" wx:for-item="image" wx:key="image">
+
+      <image mode='aspectFill' bindtap="preview" src="{{image}}" data-list="{{imgalist}}" data-src="{{image}}" class='img'></image>
+      <image src='/icon/del.svg' class='icon' data-id='{{index}}' catchtap='delimage'></image>
+
+    </view>
+    <image wx:if="{{imgalist.length<9}}" bindtap="chooseimage" class='img' src='/icon/upload.png'></image>
+    <view class='advice'>你上传的附件仅对解答问题的医生可见，可上传9张</view>
+  </view>
+</view>
+<button class="weui-btn" bindtap="toDo">下一步</button>
